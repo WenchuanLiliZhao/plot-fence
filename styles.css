@@ -58,15 +58,6 @@
 	overflow: visible;
 }
 
-.plot-fence-host .ck-figure-readout {
-	margin-left: auto;
-	color: var(--fg-muted);
-	font-family: var(--mono);
-	font-size: 12px;
-	text-align: right;
-	max-width: min(100%, 42rem);
-}
-
 .plot-fence-host .ck-figure-body {
 	position: relative;
 	padding: 12px;
