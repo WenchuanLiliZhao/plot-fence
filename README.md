@@ -21,11 +21,22 @@ domain: [-3, 3]
 ```
 ````
 
-Types: `function`, `extrema`, `riemann`, `accumulation`, `slopefield`, `taylor`, `vectorfield`, `surface3d`.
+Types: `function`, `extrema`, `riemann`, `accumulation`, `slopefield`, `taylor`, `vectorfield`, `surface3d`, `region`.
 
 Aliases: `expression` → `f`, `steps` → `n`, `bounds` → `range`.
 
-This draws graphs of $y = f(x)$ and calculus illustrations. It does **not** plot implicit curves such as $x^2 + y^2 = 1$.
+`$y = f(x)$` uses `function`. Implicit curves and inequality sets use `region`. A `where` clause is **one** comparison (`lhs < rhs`, also `<=`, `>`, `>=`, `=`), not a chain of `and`s.
+
+Single-quote any YAML value that contains `[`, `]`, or `\`. Unquoted `$[0,1]$` is parsed as a list, and `"\times"` eats `\t` as a tab; both render as a red error box instead of a figure.
+
+````markdown
+```plot region
+title: '$x^2 + y^2 < 1$'
+where: "x^2 + y^2 < 1"
+domain: [-2, 2]
+range: [-2, 2]
+```
+````
 
 ## Installing from source
 

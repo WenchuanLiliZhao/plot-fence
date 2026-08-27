@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-plot-fence",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Render interactive calc-kit figures from ```plot YAML code blocks.",
 	"main": "main.js",
 	"type": "module",
