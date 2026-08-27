@@ -1,0 +1,253 @@
+.plot-fence-host {
+	--fg: var(--text-normal);
+	--fg-muted: var(--text-muted);
+	--fg-subtle: var(--text-faint);
+	--bg: var(--background-primary);
+	--bg-subtle: var(--background-secondary);
+	--border: var(--background-modifier-border);
+	--border-muted: var(--background-modifier-border);
+	--accent: var(--interactive-accent);
+	--danger: var(--text-error);
+	--plot-ink: var(--text-normal);
+	--plot-grid: var(--background-modifier-border);
+	--plot-axis: var(--text-muted);
+	--plot-curve: var(--interactive-accent);
+	--plot-curve-2: var(--color-purple, #8250df);
+	--plot-curve-3: var(--color-pink, #bf3989);
+	--plot-fill: color-mix(in srgb, var(--interactive-accent) 16%, transparent);
+	--plot-accent: var(--color-red, var(--text-error));
+	--plot-accent-2: var(--color-green, var(--text-success));
+	--mono: var(--font-monospace);
+	margin: 0.75em 0;
+}
+
+.plot-fence-host .ck-figure {
+	margin: 0;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	background: var(--bg);
+	overflow: hidden;
+}
+
+.plot-fence-host .ck-figure-head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	padding: 10px 14px;
+	background: var(--bg-subtle);
+	border-bottom: 1px solid var(--border);
+}
+
+.plot-fence-host .ck-figure-title {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--fg);
+}
+
+.plot-fence-host .ck-figure-title p,
+.plot-fence-host .ck-figure-caption p {
+	display: inline;
+	margin: 0;
+}
+
+.plot-fence-host .ck-figure-title .katex,
+.plot-fence-host .ck-figure-caption .katex,
+.plot-fence-host .ck-figure-title .math,
+.plot-fence-host .ck-figure-caption .math {
+	overflow: visible;
+}
+
+.plot-fence-host .ck-figure-readout {
+	margin-left: auto;
+	color: var(--fg-muted);
+	font-family: var(--mono);
+	font-size: 12px;
+	text-align: right;
+	max-width: min(100%, 42rem);
+}
+
+.plot-fence-host .ck-figure-body {
+	position: relative;
+	padding: 12px;
+}
+
+.plot-fence-host .ck-figure-caption {
+	padding: 10px 14px;
+	border-top: 1px solid var(--border-muted);
+	color: var(--fg-muted);
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.plot-fence-host .ck-canvas {
+	display: block;
+	width: 100%;
+	height: 380px;
+	touch-action: pan-y;
+}
+
+.plot-fence-host .ck-canvas.is-tall {
+	height: 460px;
+}
+
+.plot-fence-host .ck-canvas.is-short {
+	height: 280px;
+}
+
+.plot-fence-host .ck-canvas.is-grabbable {
+	cursor: grab;
+}
+
+.plot-fence-host .ck-canvas.is-grabbing {
+	cursor: grabbing;
+}
+
+.plot-fence-host .ck-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 14px;
+	padding: 10px 14px;
+	border-top: 1px solid var(--border-muted);
+	background: var(--bg);
+}
+
+.plot-fence-host .ck-control {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 13px;
+}
+
+.plot-fence-host .ck-control-label {
+	color: var(--fg-muted);
+	white-space: nowrap;
+}
+
+.plot-fence-host .ck-segmented {
+	display: inline-flex;
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.plot-fence-host .ck-segmented button {
+	padding: 4px 11px;
+	background: var(--bg);
+	border: 0;
+	border-left: 1px solid var(--border);
+	color: var(--fg);
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.plot-fence-host .ck-segmented button:first-child {
+	border-left: 0;
+}
+
+.plot-fence-host .ck-segmented button:hover {
+	background: var(--bg-subtle);
+}
+
+.plot-fence-host .ck-segmented button.is-active {
+	background: var(--accent);
+	color: var(--text-on-accent);
+}
+
+.plot-fence-host .ck-btn {
+	padding: 4px 12px;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	color: var(--fg);
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.plot-fence-host .ck-btn:hover {
+	background: var(--bg-subtle);
+}
+
+.plot-fence-host .ck-btn.is-active {
+	background: var(--accent);
+	border-color: var(--accent);
+	color: var(--text-on-accent);
+}
+
+.plot-fence-host .ck-slider {
+	width: 150px;
+	accent-color: var(--accent);
+}
+
+.plot-fence-host .ck-value {
+	min-width: 3.5em;
+	font-family: var(--mono);
+	font-size: 12px;
+	font-variant-numeric: tabular-nums;
+	color: var(--fg);
+}
+
+.plot-fence-host .ck-check {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	cursor: pointer;
+	user-select: none;
+	color: var(--fg);
+}
+
+.plot-fence-host .ck-check input {
+	accent-color: var(--accent);
+}
+
+.plot-fence-host .ck-legend {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 16px;
+	padding: 8px 14px 10px;
+	border-top: 1px solid var(--border-muted);
+	font-size: 12px;
+	color: var(--fg-muted);
+}
+
+.plot-fence-host .ck-legend-item {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.plot-fence-host .ck-legend-swatch {
+	width: 14px;
+	height: 3px;
+	border-radius: 2px;
+	background: currentColor;
+}
+
+.plot-fence-error {
+	margin: 0.75em 0;
+	padding: 10px 12px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	background: var(--background-modifier-error);
+	color: var(--text-error);
+	font-family: var(--font-monospace);
+	font-size: 0.85em;
+	white-space: pre-wrap;
+}
+
+@media (max-width: 620px) {
+	.plot-fence-host .ck-canvas {
+		height: 300px;
+	}
+
+	.plot-fence-host .ck-canvas.is-tall {
+		height: 360px;
+	}
+}

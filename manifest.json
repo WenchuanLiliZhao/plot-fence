@@ -1,0 +1,10 @@
+{
+	"id": "plot-fence",
+	"name": "Plot fence",
+	"version": "1.0.0",
+	"minAppVersion": "1.4.0",
+	"description": "Render interactive calc-kit figures from ```plot YAML code blocks.",
+	"author": "WenchuanLiliZhao",
+	"authorUrl": "https://github.com/WenchuanLiliZhao",
+	"isDesktopOnly": false
+}
